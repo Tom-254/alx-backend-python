@@ -1,26 +1,26 @@
 #!/usr/bin/env bash
-allThreads=("0-add.py" "1-concat.py" "2-floor.py" "3-to_str.py" "4-define_variables.py" "5-sum_list.py" "6-sum_mixed_list.py" "7-to_kv.py" "8-make_multiplier.py" "9-element_length.py" "100-safe_first_element.py" "101-safely_get_value.py" "102-type_checking.py")
+allThreads=("test_utils.py" "test_client.py" "utils.py" "client.py" "fixtures.py")
 
-mkdir -p "0x00-python_variable_annotations"
+mkdir -p "0x03-Unittests_and_integration_tests"
 
 for t in ${allThreads[@]}; do
 
     if [[ $t == *".py"* ]]; then
-        echo -e "#!/usr/bin/python3\n" > "./0x00-python_variable_annotations/$t" && chmod +x "./0x00-python_variable_annotations$t"
+        echo -e "#!/usr/bin/env python3\n" > "./0x03-Unittests_and_integration_tests/$t" && chmod +x "./0x03-Unittests_and_integration_tests/$t"
     else
-        # echo -e "#include \"0x00-python_variable_annotations.h\"" "" "" "" "" ""> "./0x00-python_variable_annotations/$t"
-        touch "./0x00-python_variable_annotations/$t"
+        # echo -e "#include \"0x03-Unittests_and_integration_tests.h\"" "" "" "" "" ""> "./0x03-Unittests_and_integration_tests/$t"
+        touch "./0x03-Unittests_and_integration_tests/$t"
     fi
 
 done
 
-echo -e "# ALX Software Engineering Programme Project: 0x00. Python - Variable Annotations" > "./0x00-python_variable_annotations/README.md"
+echo -e "# ALX Software Engineering Programme Project: 0x03. Unittests and Integration Tests" > "./0x03-Unittests_and_integration_tests/README.md"
 
-echo -e "#!/bin/bash\ngit add . && git commit -m '0x00. Python - Variable Annotations' && git push"  > "./0x00-python_variable_annotations/correction" && chmod +x "./0x00-python_variable_annotations/correction"
+echo -e "#!/bin/bash\ngit add . && git commit -m '0x03. Unittests and Integration Tests' && git push"  > "./0x03-Unittests_and_integration_tests/correction" && chmod +x "./0x03-Unittests_and_integration_tests/correction"
 
-cp "../alx-higher_level_programming/0x05-python-exceptions/clean_up_corrections" "./0x00-python_variable_annotations/"
+cp "../alx-higher_level_programming/0x05-python-exceptions/clean_up_corrections" "./0x03-Unittests_and_integration_tests/"
 
-cd ./0x00-python_variable_annotations
+cd ./0x03-Unittests_and_integration_tests
 
 # mkdir -p "0x1C-makefiles"
 

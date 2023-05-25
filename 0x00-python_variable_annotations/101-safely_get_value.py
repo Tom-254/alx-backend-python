@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """iterable object"""
-from typing import Any, Union, Mapping, Optional, TypeVar
+from typing import Any, Union, Mapping, TypeVar
 
 T = TypeVar('T')
 
